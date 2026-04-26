@@ -4,7 +4,7 @@ const moviesData = [
         id: 1,
         title: "Avengers: Endgame",
         genre: "Action, Sci-Fi",
-        poster: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=600&fit=crop",
+        poster: "https://images.unsplash.com/photo-1489599091528-f4b0a5a929a9?w=1200&h=600&fit=crop",
         rating: 8.4,
         duration: "181 menit",
         cinemas: {
