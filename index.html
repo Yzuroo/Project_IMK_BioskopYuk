@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMax - Pemesanan Tiket Bioskop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-film"></i>
+                    <span>CineMax</span>
+                </div>
+                <div class="user-profile">
+                    <i class="fas fa-user"></i>
+                    <span id="userName">Guest</span>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Location & Date Picker -->
+        <section class="location-section">
+            <div class="container">
+                <div class="location-card">
+                    <div class="location-item active" data-location="jakarta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Jakarta</span>
+                    </div>
+                    <div class="location-item" data-location="bandung">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Bandung</span>
+                    </div>
+                    <div class="location-item" data-location="surabaya">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Surabaya</span>
+                    </div>
+                </div>
+
+                <div class="date-picker">
+                    <button class="date-btn prev" id="prevDate"><i class="fas fa-chevron-left"></i></button>
+                    <div class="date-display" id="currentDate">Hari Ini, 15 Des 2024</div>
+                    <button class="date-btn next" id="nextDate"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Movies Grid -->
+        <section class="movies-section">
+            <div class="container">
+                <h2 class="section-title">Sedang Tayang</h2>
+                <div class="movies-grid" id="moviesGrid">
+                    <!-- Movies akan di-generate oleh JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Modal -->
+        <div class="modal" id="bookingModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="movieTitleModal"></h3>
+                    <button class="close-modal" id="closeModal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="cinema-info">
+                        <h4>Pilih Bioskop</h4>
+                        <div class="cinema-options" id="cinemaOptions">
+                            <!-- Cinema options akan di-generate -->
+                        </div>
+                    </div>
+
+                    <div class="showtime-section">
+                        <h4 id="showtimeTitle"></h4>
+                        <div class="showtimes" id="showtimes">
+                            <!-- Showtimes akan di-generate -->
+                        </div>
+                    </div>
+
+                    <div class="seats-section">
+                        <h4>Pilih Kursi</h4>
+                        <div class="seats-container" id="seatsContainer">
+                            <!-- Seat map akan di-generate -->
+                        </div>
+                        <div class="seats-legend">
+                            <span class="legend-item available"><div></div> Tersedia</span>
+                            <span class="legend-item selected"><div></div> Dipilih</span>
+                            <span class="legend-item booked"><div></div> Terisi</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-summary">
+                        <div class="summary-item">
+                            <span>Tiket:</span>
+                            <span id="ticketCount">0</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Total:</span>
+                            <span id="totalPrice">Rp 0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="backToMovies">Kembali</button>
+                    <button class="btn btn-primary" id="confirmBooking">Lanjut Bayar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div class="modal success-modal" id="successModal">
+        <div class="modal-content success-content">
+            <i class="fas fa-check-circle"></i>
+            <h3>Pesanan Berhasil!</h3>
+            <p>Tiket Anda telah dikonfirmasi. Silakan tunjukkan kode booking ini di bioskop.</p>
+            <div class="booking-code">BKNG-20241215-001</div>
+            <button class="btn btn-primary" id="newBooking">Pesan Lagi</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
