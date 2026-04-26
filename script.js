@@ -21,7 +21,7 @@ const moviesData = [
         id: 2,
         title: "Spider-Man: No Way Home",
         genre: "Action, Adventure",
-        poster: "https://images.unsplash.com/photo-1611606066920-63bf9c4f6816?w=400&h=600&fit=crop",
+        poster: "https://images.unsplash.com/photo-1578632344414-57106a254b2e?w=1200&h=600&fit=crop",
         rating: 8.2,
         duration: "148 menit",
         cinemas: {
@@ -38,7 +38,7 @@ const moviesData = [
         id: 3,
         title: "Dune",
         genre: "Sci-Fi, Adventure",
-        poster: "https://images.unsplash.com/photo-1635805734198-337a88c5f8bd?w=400&h=600&fit=crop",
+        poster: "https://images.unsplash.com/photo-1489599091528-f4b0a5a929a9?w=400&h=600&fit=crop",
         rating: 8.0,
         duration: "155 menit",
         cinemas: {
